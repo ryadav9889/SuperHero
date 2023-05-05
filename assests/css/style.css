@@ -1,0 +1,153 @@
+body{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: larger;
+    /* color: blue; */
+}
+
+/* @media only screen and () {
+    
+} */
+
+
+
+
+
+#header{
+    position: absolute;
+   width:100vw ;
+    min-height: 150px;
+    /* border: 2px solid red; */
+    background-image: url('../images/bg.jpg');
+    
+    background-size: cover;
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+    align-items: center;
+    /* overflow: hidden; */
+    
+}
+header a{
+    color: coral;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+header a:hover{
+      color: aqua;
+}
+
+#home h3::before{
+    content: url(../images/house-solid.svg);
+}
+
+#super{
+    position: relative;
+    /* left: ; */
+}
+
+#super h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(80, 255, 220);
+    font-size: 50px;
+    transition: 0.6s;
+}
+
+#super h2:hover{
+      font-size: 70px;
+      color:rgb(139, 49, 0);
+}
+
+#fav{
+    position: relative;
+    /* left: 12%; */
+}
+
+#fav h3::after{
+    content: '\2665';
+    width: 50px;
+    color: red;
+}
+
+/*---------------------------------------------------- Search Bar and Results---------------------------------------- */
+
+
+
+/* Main */
+#container{
+    margin-top:250px;
+    margin-left: 100px;
+    margin-right: 100px;
+    position: absolute;
+     width: auto;
+     height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-items: start; */
+    /* border: 2px solid blue; */
+    z-index: 1;
+
+}
+.character{
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid black; */
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-content: center; */
+
+
+
+}
+
+#character-detail{
+    width: 250px;
+    height: 250px;
+    /* border: 2px solid rgb(202, 10, 10); */
+    /* margin: 10px; */
+}
+
+#character-detail img{
+    width: 250px;
+    height: 250px;
+    transition: 0.5s;
+    border-radius: 25px;
+    box-shadow: 3px 3px rgb(9, 9, 239);
+
+}
+#character-detail img:hover{
+    width: 275px;
+    height: 275px;
+}
+
+
+
+#character-about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 20px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    /* text-align: center; */
+    font-size: small;
+    
+  }
