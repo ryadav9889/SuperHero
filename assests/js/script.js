@@ -2,10 +2,10 @@
    let arr=[];
 //    arr.length=0;
 ((()=>{
-var conn = new XMLHttpRequest();
-conn.onload = function(){
-    var responseJSON = JSON.parse(conn.response);
-            console.log(responseJSON);
+// var conn = new XMLHttpRequest();
+function handler(responseJSON){
+    // var responseJSON = JSON.parse(conn.response);
+        
             var imageURL = responseJSON.data.results["1"].thumbnail.path;
             var obj=responseJSON.data.results;
           //   console.log(obj);
@@ -161,10 +161,13 @@ conn.onload = function(){
 
             document.getElementById('footer').innerText=responseJSON.attributionText;            ;
 }
-conn.open('get','http://gateway.marvel.com/v1/public/characters?ts=2&apikey=494ed1eb931aff37808083dfe4f0d43f&hash=4999b6e62f85dd61c3aebc2b702c351b',true);
-conn.send();
+// conn.open('get','http://gateway.marvel.com/v1/public/characters?ts=2&apikey=494ed1eb931aff37808083dfe4f0d43f&hash=4999b6e62f85dd61c3aebc2b702c351b',true);
+// conn.send();
 // console.log('hii');
 
+fetch(`http://gateway.marvel.com/v1/public/characters?ts=2&apikey=494ed1eb931aff37808083dfe4f0d43f&hash=4999b6e62f85dd61c3aebc2b702c351b`)
+.then(res => res.json())
+.then(data => handler(data));
 })());
 
 
